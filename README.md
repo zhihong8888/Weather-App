@@ -2,7 +2,7 @@
 
 ## Installation
 
-RP-SKH [Node.js](https://nodejs.org/) v14+ to run.
+Weather App [Node.js](https://nodejs.org/) v14+ to run.
 Node version: v18.18.0 (LTS/hydrogen)
 
 
