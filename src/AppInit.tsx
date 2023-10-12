@@ -5,6 +5,8 @@ import './assets/css/style.css'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { useState } from 'react'
 
+const isProdEnv = import.meta.env.PROD
+
 const AppInit = () => {
   const [queryClient] = useState(
     () =>
@@ -22,7 +24,12 @@ const AppInit = () => {
         },
       })
   )
-  
+
+  // suspress console log in production env
+  if (isProdEnv) {
+    window.console.log = () => {}
+  }
+
   return (
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>

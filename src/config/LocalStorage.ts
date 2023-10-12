@@ -1,10 +1,9 @@
-import SecureLS from 'secure-ls';
+import secureLocalStorage from 'react-secure-storage'
+
 
 export const STORAGE_KEYS = {
   SEARCH_HISTORY: 'SHVVQ98IU',
 }
-
-const ls = new SecureLS({encodingType: 'aes', isCompression: false});
 
 export interface ISearchHistory {
   city: string
@@ -13,13 +12,13 @@ export interface ISearchHistory {
 }
 
 export const getSearchHistoryFromLocal = () => {
-  return localStorage.getItem(STORAGE_KEYS.SEARCH_HISTORY)
+  return secureLocalStorage.getItem(STORAGE_KEYS.SEARCH_HISTORY)
 }
 
 export const setSearchHistoryToLocal = (time: ISearchHistory[]) => {
-  localStorage.setItem(STORAGE_KEYS.SEARCH_HISTORY, JSON.stringify(time))
+  secureLocalStorage.setItem(STORAGE_KEYS.SEARCH_HISTORY, JSON.stringify(time))
 }
 
 export const removeLSearchHistoryFromLocal = () => {
-  localStorage.removeItem(STORAGE_KEYS.SEARCH_HISTORY)
+  secureLocalStorage.removeItem(STORAGE_KEYS.SEARCH_HISTORY)
 }

@@ -27,8 +27,6 @@ const SearchHistory: FC<IProps> = (props) => {
       return dateB - dateA
     })
     setSortedHistory(sortedAsc)
-    console.log('sortedHistory: ', sortedHistory)
-    console.log(dayjs('Thu, 12 Oct 2023 20:49:04 GMT').toISOString())
   }, [searchHistory])
 
   return (
