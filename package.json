@@ -8,7 +8,9 @@
     "production": "vite --open --mode production",
     "build": "tsc && vite build --mode production",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "eslint": "eslint --ext ts,tsx,js,jsx src/.",
+    "eslint:fix": "eslint --fix --ext ts,tsx,js,jsx src/."
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
