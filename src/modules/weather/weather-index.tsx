@@ -57,7 +57,7 @@ const WeatherWrapper = () => {
     let history2
     if (history) {
       try {
-        history2 = JSON.parse(history) as ISearchHistory[]
+        history2 = JSON.parse(history as string) as ISearchHistory[]
         setSearchHistory(history2)
       } catch (err: any) {}
     }
