@@ -3,10 +3,10 @@ import { commonColours } from './commonColors'
 import { typography } from './typograpy'
 
 // Create a theme instance.
-const darkTheme = () => {
+const lightTheme = () => {
   return responsiveFontSizes(
     createTheme({
-      palette: darkColors,
+      palette: lightColors,
       breakpoints: {
         values: {
           xs: 0,
@@ -22,7 +22,7 @@ const darkTheme = () => {
   )
 }
 
-export const darkColors: PaletteOptions = {
+export const lightColors: PaletteOptions = {
   components:{
     searchField: '#32235C',
     searchIcon: '#2B2443',
@@ -32,9 +32,9 @@ export const darkColors: PaletteOptions = {
     secondary: '#D8CCF2',
   },
   primary: {
-    main: '#3E2E6D',
-    dark: '#2B2443',
-    light: '#4D3490',
+    main: '#d2bfed',
+    dark: '#b9a4e8',
+    light: '#e8d9f6',
   },
   secondary: {
     main: '#FFFFFF',
@@ -130,4 +130,4 @@ declare module '@mui/material/Button' {
   }
 }
 
-export default darkTheme
+export default lightTheme

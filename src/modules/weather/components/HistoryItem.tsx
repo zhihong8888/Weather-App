@@ -50,7 +50,7 @@ const HistoryItem: FC<IProps> = (props) => {
             sx={{
               color: (theme) => theme.palette.text.secondary,
               marginRight: '10px',
-              fontSize: { xs: '15px', md: '15px', lg: '20px' },
+              fontSize: { xs: '15px', md: '15px', lg: '15px' },
             }}
           >
             {dayjs(dateTime).format(DATE_FORMAT)}
